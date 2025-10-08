@@ -84,7 +84,8 @@ Recognizing the necessity of developing a robust object detection model that per
 - 𝛼∈{0,1} : smoothing factor
 - 𝐾 : Number of classes
 - 𝑦 ̃_𝑘 : Smoothed label distribution
- <img width="186" height="266" alt="image" src="https://github.com/user-attachments/assets/15bf2b45-a321-4d71-94e1-1770f9207e92" />
+
+<img width="186" height="266" alt="image" src="https://github.com/user-attachments/assets/15bf2b45-a321-4d71-94e1-1770f9207e92">
 
 - 𝑦 ̃_𝑖  : Smoothed label distribution
 - 𝑝_𝑖 : Softmax output (predicted probability)
