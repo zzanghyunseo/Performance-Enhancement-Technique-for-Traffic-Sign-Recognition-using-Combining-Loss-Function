@@ -2,11 +2,10 @@
 
 
 ## Table of Contents
-1. [Research Background](#research-background)  
-2. [Research Methods](#research-methods)  
-3. [Experiments](#experiments)  
-4. [Conclusion](#conclusion)  
-5. [Dataset](#dataset)  
+1. [Research Background]
+2. [Research Methods]
+3. [Experiments]
+4. [Conclusion]
 
 ---
 
@@ -21,8 +20,16 @@ Recognizing the necessity of developing a robust object detection model that per
 
 ---
 
-## Research Methods
-*You can fill this section with details on the model architecture, loss functions, image augmentation, training/validation/test split, etc.*
+## Dataset
+- **Source**: Publicly available traffic sign dataset from Kaggle  
+- **Total images**: 877  
+- **Number of classes**: 4  
+  - Speed Limit: 783  
+  - Traffic Light: 170  
+  - Crosswalk: 200  
+  - Stop: 91  
+- <img width="346" height="234" alt="image" src="https://github.com/user-attachments/assets/fc5caf95-4e25-4831-92ba-29b99318d944" />
+
 
 ---
 
@@ -39,13 +46,6 @@ Recognizing the necessity of developing a robust object detection model that per
 
 ---
 
-## Dataset
-- **Source**: Publicly available traffic sign dataset from Kaggle  
-- **Total images**: 877  
-- **Number of classes**: 4  
-  - Speed Limit: 783  
-  - Traffic Light: 170  
-  - Crosswalk: 200  
-  - Stop: 91  
+
 
 *Note: The dataset exhibits class imbalance, which was considered during model training and evaluation.*
