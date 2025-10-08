@@ -1,12 +1,5 @@
 # Performance Enhancement Technique for Traffic Sign Recognition using Combining Label Smoothing and Focal Loss
 
-
-## Table of Contents
-1. [Research Background]
-2. [Research Methods]
-3. [Experiments]
-4. [Conclusion]
-
 ---
 
 ## Research Background
