@@ -21,7 +21,7 @@ Recognizing the necessity of developing a robust object detection model that per
   - Traffic Light: 170  
   - Crosswalk: 200  
   - Stop: 91
-    <img width="346" height="234" alt="image" src="https://github.com/user-attachments/assets/fc5caf95-4e25-4831-92ba-29b99318d944" />
+  <img width="346" height="234" alt="image" src="https://github.com/user-attachments/assets/fc5caf95-4e25-4831-92ba-29b99318d944" />
   &rarr; Class imbalance
 
 - Image augmentation using Albumentations library
