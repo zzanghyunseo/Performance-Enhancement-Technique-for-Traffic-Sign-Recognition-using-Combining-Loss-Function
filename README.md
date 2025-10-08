@@ -22,7 +22,7 @@ Recognizing the necessity of developing a robust object detection model that per
   - Crosswalk: 200  
   - Stop: 91  
 - <img width="346" height="234" alt="image" src="https://github.com/user-attachments/assets/fc5caf95-4e25-4831-92ba-29b99318d944" />
-- ==> Class imbalance
+- => Class imbalance
 
 
 ---
