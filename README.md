@@ -14,29 +14,50 @@ Recognizing the necessity of developing a robust object detection model that per
 ---
 
 ## Dataset
-- **Source**: Publicly available traffic sign dataset from Kaggle  
-- **Total images**: 877  
-- **Number of classes**: 4  
+- Dataset: Publicly available traffic sign dataset from Kaggle  
+- Total images: 877  
+- Number of classes: 4  
   - Speed Limit: 783  
   - Traffic Light: 170  
   - Crosswalk: 200  
   - Stop: 91
-  - <img width="346" height="234" alt="image" src="https://github.com/user-attachments/assets/fc5caf95-4e25-4831-92ba-29b99318d944" />
+    <img width="346" height="234" alt="image" src="https://github.com/user-attachments/assets/fc5caf95-4e25-4831-92ba-29b99318d944" />
   &rarr; Class imbalance
 
+- Image augmentation using Albumentations library
+	- Brightness, contrast, blur, fog, rain, etc.
+- Dataset split : Randomly shuffled &rarr; Train 80% / Validation 10% / Test 10%
+- **Train : Original + Night/Adverse weather augmented images**
+  &rarr; to account for diverse scenarios
+- **Validation / Test : Original images**
+  &rarr; to fairly evaluate the generalization performance of the model
+  <img width="818" height="160" alt="image" src="https://github.com/user-attachments/assets/491f7d8b-9676-45d5-9f12-127148788b91" />
 
 ---
 
-## Experiments
-*This section can describe experimental setup, performance metrics (Precision, Recall, mAP@50, mAP@50-95), hyperparameter tuning, and comparisons of different loss functions.*
+## YOLOv8 (You Only Look Once)
+- Backbone
+ Multi-scale feature extraction using advanced CNN
+
+- Neck
+ Fusion of features at different scales
+ Improves detection performance for small to large objects
+
+- Head
+ **Anchor-Free structure** : Direct prediction without Anchor Boxes &rarr; **simplifying the architecture and enhancing flexibility**
 
 ---
 
-## Conclusion
-*Summarize the key findings here. For example:*
-- The proposed combined loss function improves performance under challenging conditions.
-- The YOLOv8-based model shows high accuracy and robustness across various weather and lighting conditions.
-- Future work includes implementing real-time detection and lightweight models for practical deployment.
+## Binary Cross Entropy (BCE)
+ℒ_𝐵𝐶𝐸=−[𝑦∙log⁡(𝑦 ̂ )+(1−𝑦)∙𝑙𝑜𝑔(1−𝑦 ̂ )]
+-- 𝑦∈{0,1}   : Ground truth (actual label)
+-- 𝑦 ̂∈{0,1} : Sigmoid output (predicted probability)
+
+- Representative loss function used in binary classification
+- Default loss function in YOLOv8
+- Calculates the difference between predicted probability and true label
+- **Tends to make the model overconfident in the correct class**
+  &rarr; May cause performance degradation when dealing with class imbalance or hard-to-classify samples.
 
 ---
 
