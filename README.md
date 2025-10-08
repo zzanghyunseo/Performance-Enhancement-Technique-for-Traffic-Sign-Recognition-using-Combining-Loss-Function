@@ -51,7 +51,8 @@ Recognizing the necessity of developing a robust object detection model that per
 ---
 
 ## Binary Cross Entropy (BCE)
-ℒ_𝐵𝐶𝐸=−[𝑦∙log⁡(𝑦 ̂ )+(1−𝑦)∙𝑙𝑜𝑔(1−𝑦 ̂ )]
+<img width="450" height="43" alt="image" src="https://github.com/user-attachments/assets/3e4ba742-afe3-4166-8c03-29ab063b4d4b" />
+
 - 𝑦∈{0,1}   : Ground truth (actual label)
 - 𝑦 ̂∈{0,1} : Sigmoid output (predicted probability)
 
